@@ -1,0 +1,25 @@
+{
+  "name": "deployed-movies-data-base",
+  "version": "1.0.0",
+  "description": "A small website for displaying movies from data base.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArkadyKoretsky/deployed-movies-data-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArkadyKoretsky/deployed-movies-data-base/issues"
+  },
+  "homepage": "https://github.com/ArkadyKoretsky/deployed-movies-data-base#readme"
+}

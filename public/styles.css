@@ -1,0 +1,144 @@
+/* global styles */
+
+body {
+  font-family: sans-serif;
+  background-color: #0099cc;
+}
+
+h1 {
+  color: #eee;
+  margin-bottom: 30px;
+  -webkit-text-stroke: 1px black;
+}
+
+h2 {
+  position: relative;
+  grid-area: name;
+  margin-bottom: 0px;
+}
+
+img {
+  max-width: 70%;
+  max-height: 70%;
+  grid-area: image;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* Movie info styles */
+
+#moviesList {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.movie {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 20px 10px 0px;
+  max-width: 100%;
+  display: grid;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* flip the card and show the overview when hovering on the desired movie */
+.movie:hover {
+  transform: rotateY(180deg);
+}
+
+/* movie title, release date and poster */
+.front {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  backface-visibility: hidden;
+}
+
+/* movie title and overview */
+.back {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  max-height: 100%;
+  position: absolute;
+  text-align: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: #f2f2f2;
+}
+
+/* search bar styles */
+
+#searchBar {
+  width: 35%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+#searchWrapper::after {
+  content: '🔍';
+  position: relative;
+  top: 3px;
+  right: 32px;
+}
+
+/* pagination styles */
+
+#pagination a {
+  color: white;
+  float: inherit;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* add a background for the current page */
+#pagination a.active {
+  background-color: #007399;
+  color: white;
+}
+
+/* add a grey background color on hover */
+#pagination a:hover:not(.active) {
+  background-color: #1ac6ff;
+}
+
+/* years filter drop down styles */
+
+.yearSelector {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 0.85em;
+  margin: 10px;
+}
+
+.yearSelector select {
+  background-color: #c6e5ee;
+  color: rgb(0, 0, 0);
+  font-size: inherit;
+  padding: 0.5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
